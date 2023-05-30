@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comic</title>
+    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 <body>
+
+    <div>
+    </div>
+        <form class="landingpage">
+            <img src="./images/iniciar_title.jpg">
+
+            <label class="input__label label-name hidden">
+                Nombre
+                <input class="input name" type="text" placeholder="Ingresa un nombre" name="name">
+            </label>
+
+            <label class="input__label">
+                Correo
+                <input class="input" type="Email" placeholder="Ingresa un correo" name="email" required>
+            </label>
+
+            <label class="input__label">
+                Contraseña
+                    <input class="input" type="password" placeholder="Ingresa una contraseña" name="password" required>
+            </label>
+                <img src="./images/iniciar_btn.jpg">
+
+            <button class="button button--width button-login" type="submit">Iniciar Sesión</button>
+        </form>
+
     
 </body>
+<script type="module" src="./scripts/index.js"></script>
 </html>
