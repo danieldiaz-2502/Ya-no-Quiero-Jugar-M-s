@@ -10,12 +10,44 @@
 </head>
 <body>
 
-    <div>
+    <section class="seccionLandingpage">
+    <div class="landingpage__background">
+
+        <img class="landingpage__logo" src="./images/logo.png">
+        <div>
+            <input type="button" class="landingpage__btn--start buttonStart">
+            <input type="button" class="landingpage__btn--register buttonRegister">
+        </div>
     </div>
+    </section>
+
+    <section class="login hidden">
+
         <form class="landingpage">
             <img src="./images/iniciar_title.png">
 
-            <label class="input__label label-name hidden">
+            <label class="input__label">
+                Correo
+                <input class="input" type="Email" placeholder="Ingresa un correo" name="email" required>
+            </label>
+
+            <label class="input__label">
+                Contraseña
+                    <input class="input" type="password" placeholder="Ingresa una contraseña" name="password" required>
+            </label>
+                <img src="./images/iniciar_btn.png">
+
+                <input type="button" class="landingpage__btn--register buttonRegister">
+            </form>
+
+    </section>
+
+    <section class="register hidden">
+
+        <form class="landingpage">
+            <img src="./images/datos_title.png">
+
+            <label class="input__label label-name">
                 Nombre
                 <input class="input name" type="text" placeholder="Ingresa un nombre" name="name">
             </label>
@@ -31,9 +63,10 @@
             </label>
                 <img src="./images/iniciar_btn.png">
 
-            <button class="button button--width button-login" type="submit">Iniciar Sesión</button>
-        </form>
+                <input type="button" class="landingpage__btn--register buttonRegister">
+            </form>
 
+    </section>
     
 </body>
 <script type="module" src="./scripts/index.js"></script>

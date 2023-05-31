@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .landingpage{
     display: flex;
     flex-direction: column;
@@ -8,6 +10,50 @@
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 100px;
+
+
+    &__background{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../images/main_background.png");
+    }
+
+    &__logo{
+        padding: 46px 0;
+    }
+
+    &__btn{
+        &--start{
+            background: none;
+            border: 0;
+            background-image: url("../images/iniciar_btn.png");
+            background-size: cover;
+            height: 110px;
+            width: 430px;
+
+        }
+        &--start:hover{
+            background-image: url("../images/iniciar_orange_btn.png");
+        }
+        &--register{
+            background: none;
+            border: 0;
+            background-image: url("../images/iniciar_btn.png");
+            background-size: cover;
+            height: 110px;
+            width: 430px;
+            border-radius: 0px;
+        }
+        &--register:hover{
+            background-image: url("../images/iniciar_orange_btn.png");
+            }
+    }
 
 
 }
