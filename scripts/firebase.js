@@ -34,7 +34,7 @@ export const createUser = (name, email, password) =>
       console.log(name)
       //localStorage.setItem('nameUser', name)
       setDoc(doc(db, 'users', user.uid), userDoc).then(() => {
-        //location.href = "home.html";
+        location.href = "main.html";
 
       })
 
@@ -55,12 +55,13 @@ export const createUser = (name, email, password) =>
             const user = userCredential.user;
             loggedUser = user.uid
             /*localStorage.setItem('nameUser', email)
-            localStorage.setItem('idUser', user.uid)
-            location.href = "home.html";*/
+            localStorage.setItem('idUser', user.uid)*/
+            location.href = "main.html";
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            alert("Verifique el correo o la contraseña")
       
             console.log(errorCode)
       

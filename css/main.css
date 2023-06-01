@@ -32,18 +32,36 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/main_background.png");
+  background-image: url("../images/institucion.png");
+}
+.landingpage__background--credentials {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/backgorund_dark.jpg");
 }
 .landingpage__logo {
   padding: 46px 0;
 }
+.landingpage__btn {
+  display: flex;
+  justify-content: space-around;
+  width: 48%;
+}
 .landingpage__btn--start {
   background: none;
   border: 0;
+  width: 325px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   background-image: url("../images/iniciar_btn.png");
-  background-size: cover;
-  height: 110px;
-  width: 430px;
 }
 .landingpage__btn--start:hover {
   background-image: url("../images/iniciar_orange_btn.png");
@@ -51,14 +69,46 @@ body {
 .landingpage__btn--register {
   background: none;
   border: 0;
-  background-image: url("../images/iniciar_btn.png");
-  background-size: cover;
-  height: 110px;
-  width: 430px;
-  border-radius: 0px;
+  width: 325px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/registrar_btn.png");
 }
 .landingpage__btn--register:hover {
-  background-image: url("../images/iniciar_orange_btn.png");
+  background-image: url("../images/registrar_btn.png");
+}
+.landingpage__btn--send {
+  background: none;
+  border: 0;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/iniciar_btn.png");
+}
+.landingpage__btn--sendRegister {
+  background: none;
+  border: 0;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../images/registrar_btn.png");
+}
+.landingpage__btn--send:hover {
+  background-image: url("../images/iniciar_btn.png");
+}
+.landingpage__img {
+  width: 100%;
+  height: 60px;
+  background-image: url("../images/iniciar_title.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .input {
