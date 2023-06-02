@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getFirestore,setDoc, doc} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
+import { getFirestore,setDoc, doc, updateDoc} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
 import { signOut, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 
  // Your web app's Firebase configuration
@@ -30,9 +30,8 @@ export const createUser = (name, email, password) =>
         email,
         id: user.uid
       }
-      //localStorage.setItem('idUser', user.uid)
-      console.log(name)
-      //localStorage.setItem('nameUser', name)
+      localStorage.setItem('idUser', user.uid)
+  
       setDoc(doc(db, 'users', user.uid), userDoc).then(() => {
         location.href = "main.html";
 
@@ -54,8 +53,7 @@ export const createUser = (name, email, password) =>
             console.log("Inicie Sesión")
             const user = userCredential.user;
             loggedUser = user.uid
-            /*localStorage.setItem('nameUser', email)
-            localStorage.setItem('idUser', user.uid)*/
+            localStorage.setItem('idUser', user.uid)
             location.href = "main.html";
           })
           .catch((error) => {
@@ -69,4 +67,12 @@ export const createUser = (name, email, password) =>
           });
       
       }
+  
+    export const addChoice = (code,choice) =>{
+
+      const ref = doc(db, 'users', localStorage.getItem('idUser'))
+      updateDoc(ref,{
+        [code]: choice,
+      })
+    }
     

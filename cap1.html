@@ -11,11 +11,19 @@
 <body>
 
     <section class="comic commit_cap1">
-        <img class="comic--arrow" src="./images/previous_arrow.png">
-        <div class="comic--page"></div>
-        <img class="comic--arrow next" src="./images/next_arrow.png.png">
-
+        <div class="comic--arrowPrev prev"></div>
+        <div class="comic--container">
+            <div class="comic--page"></div>
+            <div class="comic--part"></div>
+            <div class="comic--opcions">
+                <button class="hidden comic--btn comic--opcion1 opcion1"></button>
+                <button class="hidden comic--btn comic--opcion2 opcion2"></button>
+            </div>
+        </div>
+        <div class="comic--arrowNext next"></div>
     </section>
     
 </body>
+<script type="module" src="./scripts/cap1.js"></script>
+
 </html>
